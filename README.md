@@ -1,4 +1,4 @@
-# LIRI - Alias of the SIRI
+# LIRI v1.0 (Beta) - Alias of the SIRI
 
 - LIRI can search twits from the twitter by the user name
 - LIRI can search music by track name, album and artist 
