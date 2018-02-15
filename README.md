@@ -1,6 +1,7 @@
-# Project Title
+# LIRI - Alias of the SIRI
 
-One Paragraph of project description goes here
+- LIRI can search twits from the twitter by the user name
+- LIRI can search track, album, artist 
 
 ## Getting Started
 
