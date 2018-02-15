@@ -55,7 +55,7 @@ function SpotifyAPI () {
 						console.log(chalk.bold("Genres:"), item.genres.join(", "));
 						console.log(chalk.bold("URL:"), item.external_urls.spotify);
 						console.log("-----------------------");
-						break;
+						break; 
 				}
 			}
 		})
