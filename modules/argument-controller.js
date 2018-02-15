@@ -53,6 +53,8 @@ function ArgumentController () {
 						return;
 					}
 
+					console.log("\n\n------------------\nFetching...\n------------------\n");
+
 					var tw = new TwitterAPI();
 					tw.getTweets(res.screen_name, res.limit);
 				});
@@ -68,11 +70,12 @@ function ArgumentController () {
 					},
 					{
 						type: 'input',
-						message: value ? "You can change the default seach. This is optional. By default will be searched" : 'What you want to search?',
+						message: value ? "You can change the default search. This is optional. By default will be searched" : 'What you want to search?',
 						name: 'query',
 						default: value
 					}
 				]).then(function(res){
+					console.log("\n\n------------------\nFetching...\n------------------\n");
 					var sp = new SpotifyAPI();
 					sp.search(res.type, res.query);
 				});
@@ -84,11 +87,13 @@ function ArgumentController () {
 					name: "movie",
 					default: value
 				}]).then(function(res){
+					console.log("\n\n------------------\nFetching...\n------------------\n");
 					var imdb = new ImdbAPI();
 					imdb.search(res.movie);
 				})
 				break;
 			case "do-what-it-says":
+				console.log("Reading random.txt to get command...");
 				fs.readFile("./random.txt", "utf8", function(err, data){
 					if(err) {
 						return console.log(err);
@@ -97,6 +102,8 @@ function ArgumentController () {
 					data = data.split(",");
 					var command = data[0]
 					var value = data[1].replace(/"/gi, "");
+					console.log("Command from random.txt is:", command, '"' + value + '"');
+					console.log("Calling command", command);
 					callback(command, value);
 				});
 				break;
