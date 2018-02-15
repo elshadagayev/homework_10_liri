@@ -15,5 +15,13 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "- LIRI can search twits from the twitter by the user name - LIRI can search music by track name, album and artist  - LIRI can search movie - LIRI can \"do what it says\" reading command from the random.txt file",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elshadagayev/homework_10_liri.git"
+  },
+  "bugs": {
+    "url": "https://github.com/elshadagayev/homework_10_liri/issues"
+  },
+  "homepage": "https://github.com/elshadagayev/homework_10_liri#readme"
 }
