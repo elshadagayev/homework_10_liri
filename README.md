@@ -18,6 +18,8 @@ For Linux:
 > sudo apt-get install npm && sudo apt-get install nodejs
 > cd ~/[project_folder]
 > npm install
+...
+> node liri
 ```
 
 
