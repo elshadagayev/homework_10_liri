@@ -37,14 +37,7 @@ function SpotifyAPI () {
 				
 				switch(type) {
 					case "tracks":
-					case "artists":
-						console.log(chalk.bold("Artists:"));
-						for(var j in item.artists) {
-							var artist = item.artists[j];
-							console.log("-", artist.name);
-						}
-
-
+						console.log(chalk.bold("Artists:"), item.artists.join(", "));
 						console.log(chalk.bold("Song name:"), item.name);
 						console.log(chalk.bold("Album name:"), item.album.name);
 						console.log(chalk.bold("URL:"), item.preview_url);
@@ -52,11 +45,14 @@ function SpotifyAPI () {
 						break;
 					case "albums":
 						console.log(chalk.bold("Album name:"), item.name);
-						console.log(chalk.bold("Artists:"));
-						for(var j in item.artists) {
-							var artist = item.artists[j];
-							console.log("-", artist.name);
-						}
+						console.log(chalk.bold("Artists:"), item.artists.join(", "));
+						console.log(chalk.bold("URL:"), item.external_urls.spotify);
+						console.log("-----------------------");
+						break;
+					case "artists":
+						console.log(chalk.bold("Artist name:"), item.name);
+						console.log(chalk.bold("Popularity:"), item.popularity);
+						console.log(chalk.bold("Genres:"), item.genres.join(", "));
 						console.log(chalk.bold("URL:"), item.external_urls.spotify);
 						console.log("-----------------------");
 						break;
